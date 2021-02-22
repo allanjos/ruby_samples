@@ -1,24 +1,31 @@
-# README
+# news-backend-rails sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Build
 
-Things you may want to cover:
+Update yarn packages:
 
-* Ruby version
+    yarn install
 
-* System dependencies
+Build:
 
-* Configuration
+    bundle install --path vendor/bundle
 
-* Database creation
+Update bundler when needed:
 
-* Database initialization
+    gem update bundler
 
-* How to run the test suite
+## Configuration
 
-* Services (job queues, cache servers, search engines, etc.)
+Create database:
 
-* Deployment instructions
+    rake db:migrate
 
-* ...
+Populate initial data:
+
+    rake db:seed
+
+## Run
+
+Run application:
+
+    rails s
