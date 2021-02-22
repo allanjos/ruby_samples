@@ -1,4 +1,4 @@
-# news-backend-rails sample
+# rest-api-rails sample
 
 ## Build
 
