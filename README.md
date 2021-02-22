@@ -1,3 +1,3 @@
 Ruby samples
 
-[rails/](Ruby on Rails sample)
+- [Ruby on Rails sample](rails/)
