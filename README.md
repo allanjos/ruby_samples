@@ -1,3 +1,3 @@
 Ruby samples
 
-- [Ruby on Rails sample](rails/)
+- [Ruby on Rails / REST](rails/rest-api-rails/)
