@@ -1,9 +1,30 @@
+require 'base64'
 require 'date'
 require 'json'
 
 class InvestmentController < ApplicationController
   def index
     puts("index()")
+
+    #request.headers.each do |key, value|
+    #  puts "#{key}: #{value}"
+    #end
+
+    #puts('Authorization: ' + request.headers['Authorization'])
+
+    authorizationToken = request.headers['Authorization']
+
+    authorizationToken = authorizationToken.gsub(/^Basic\s+/, '')
+
+    authorizationToken = Base64.decode64(authorizationToken)
+
+    #puts('Authorization token: ' + authorizationToken)
+
+    userCredential = authorizationToken.split(':')
+
+    #puts('User credential:' + userCredential[0] + ', ' + userCredential[1])
+    #puts('Login: ' + userCredential[0])
+    #puts('Password: ' + + userCredential[1])
 
     investments = Investment.all
 
@@ -27,7 +48,7 @@ class InvestmentController < ApplicationController
   def new
     puts("new()")
 
-    puts("request.raw_post: " + request.raw_post)
+    #puts("request.raw_post: " + request.raw_post)
 
     info = JSON.parse(request.raw_post)
 
@@ -52,7 +73,7 @@ class InvestmentController < ApplicationController
   def update
     puts("update()")
 
-    puts("request.raw_post: " + request.raw_post)
+    #puts("request.raw_post: " + request.raw_post)
 
     info = JSON.parse(request.raw_post)
 

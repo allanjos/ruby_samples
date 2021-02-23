@@ -1,0 +1,158 @@
+{
+	"info": {
+		"_postman_id": "3bdd9e9d-3dec-42e8-94c5-b92d057f4958",
+		"name": "rest-api-rails",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "investment - list",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46MTIzNDUK",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/rest/investment/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"rest",
+						"investment",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "investment - new",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Investment 01\",\n    \"broker\": \"Broker 01\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/rest/investment/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"rest",
+						"investment",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "investment - new Copy",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Investment 01\",\n    \"broker\": \"Broker 01\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/rest/investment/new",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"rest",
+						"investment",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "investment - delete",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Investment 01\",\n    \"broker\": \"Broker 01\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/rest/investment/delete?id=5",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"rest",
+						"investment",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "investment - update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 4,\n    \"name\": \"Asset 01\",\n    \"broker\": \"Broker 02\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/rest/investment/update",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"rest",
+						"investment",
+						"update"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
